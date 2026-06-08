@@ -1,0 +1,353 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Mon Jun  8 02:42:00 2026
+# Process ID         : 34189
+# Current directory  : /home/bkanaley/lab_3_jun_7/lab_3_jun_7.runs/design_1_neorv32_vivado_ip_0_0_synth_1
+# Command line       : vivado -log design_1_neorv32_vivado_ip_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_neorv32_vivado_ip_0_0.tcl
+# Log file           : /home/bkanaley/lab_3_jun_7/lab_3_jun_7.runs/design_1_neorv32_vivado_ip_0_0_synth_1/design_1_neorv32_vivado_ip_0_0.vds
+# Journal file       : /home/bkanaley/lab_3_jun_7/lab_3_jun_7.runs/design_1_neorv32_vivado_ip_0_0_synth_1/vivado.jou
+# Running On         : ubuntuFPGA
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1240P
+# CPU Frequency      : 2112.008 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 8
+# Host memory        : 8324 MB
+# Swap memory        : 0 MB
+# Total Virtual      : 8324 MB
+# Available Virtual  : 5677 MB
+#-----------------------------------------------------------
+source design_1_neorv32_vivado_ip_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1593.176 ; gain = 199.160 ; free physical = 542 ; free virtual = 3650
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bkanaley/csc-397-595-lab3-bmikek/rtl/axi_miner_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bkanaley/csc-397-595-lab3-bmikek/neorv32/rtl/system_integration/neorv32_vivado_ip_work/packaged_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/bkanaley/Vivado/2025.1/Vivado/data/ip'.
+Command: synth_design -top design_1_neorv32_vivado_ip_0_0 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 34383
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:01:05 . Memory (MB): peak = 2120.402 ; gain = 438.828 ; free physical = 117 ; free virtual = 753
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_neorv32_vivado_ip_0_0' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ip/design_1_neorv32_vivado_ip_0_0/synth/design_1_neorv32_vivado_ip_0_0.vhd:101]
+	Parameter CLOCK_FREQUENCY bound to: 100000000 - type: integer 
+	Parameter DUAL_CORE_EN bound to: 0 - type: bool 
+	Parameter BOOT_MODE_SELECT bound to: 0 - type: integer 
+	Parameter BOOT_ADDR_CUSTOM bound to: 32'b00000000000000000000000000000000 
+	Parameter OCD_EN bound to: 0 - type: bool 
+	Parameter OCD_NUM_HW_TRIGGERS bound to: 0 - type: integer 
+	Parameter OCD_AUTHENTICATION bound to: 0 - type: bool 
+	Parameter OCD_JEDEC_ID bound to: 11'b00000000000 
+	Parameter RISCV_ISA_C bound to: 0 - type: bool 
+	Parameter RISCV_ISA_E bound to: 0 - type: bool 
+	Parameter RISCV_ISA_M bound to: 0 - type: bool 
+	Parameter RISCV_ISA_U bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zaamo bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zalrsc bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zba bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zbb bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zbkb bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zbkc bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zbkx bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zbs bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zcb bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zfinx bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zibi bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zicntr bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zicond bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zihpm bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zimop bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zmmul bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zknd bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zkne bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zknh bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zksed bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zksh bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Smcntrpmf bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Xcfu bound to: 0 - type: bool 
+	Parameter CPU_CONSTT_BR_EN bound to: 0 - type: bool 
+	Parameter CPU_FAST_MUL_EN bound to: 0 - type: bool 
+	Parameter CPU_FAST_SHIFT_EN bound to: 0 - type: bool 
+	Parameter CPU_RF_ARCH_SEL bound to: 1 - type: integer 
+	Parameter PMP_NUM_REGIONS bound to: 0 - type: integer 
+	Parameter PMP_MIN_GRANULARITY bound to: 4 - type: integer 
+	Parameter PMP_TOR_MODE_EN bound to: 0 - type: bool 
+	Parameter PMP_NAP_MODE_EN bound to: 0 - type: bool 
+	Parameter HPM_NUM_CNTS bound to: 0 - type: integer 
+	Parameter HPM_CNT_WIDTH bound to: 40 - type: integer 
+	Parameter IMEM_EN bound to: 1 - type: bool 
+	Parameter IMEM_BASE bound to: 32'b00000000000000000000000000000000 
+	Parameter IMEM_SIZE bound to: 32768 - type: integer 
+	Parameter IMEM_OUTREG_EN bound to: 0 - type: bool 
+	Parameter DMEM_EN bound to: 1 - type: bool 
+	Parameter DMEM_BASE bound to: 32'b10000000000000000000000000000000 
+	Parameter DMEM_SIZE bound to: 8192 - type: integer 
+	Parameter DMEM_OUTREG_EN bound to: 0 - type: bool 
+	Parameter ICACHE_EN bound to: 0 - type: bool 
+	Parameter ICACHE_NUM_BLOCKS bound to: 4 - type: integer 
+	Parameter DCACHE_EN bound to: 0 - type: bool 
+	Parameter DCACHE_NUM_BLOCKS bound to: 4 - type: integer 
+	Parameter CACHE_BLOCK_SIZE bound to: 64 - type: integer 
+	Parameter CACHE_BURSTS_EN bound to: 0 - type: bool 
+	Parameter XBUS_EN bound to: 1 - type: bool 
+	Parameter XBUS_TIMEOUT bound to: 2048 - type: integer 
+	Parameter XBUS_REGSTAGE_EN bound to: 0 - type: bool 
+	Parameter IO_GPIO_EN bound to: 1 - type: bool 
+	Parameter IO_GPIO_IN_NUM bound to: 1 - type: integer 
+	Parameter IO_GPIO_OUT_NUM bound to: 1 - type: integer 
+	Parameter IO_GPIO_DIR_EN bound to: 0 - type: bool 
+	Parameter IO_GPIO_DIR_NUM bound to: 1 - type: integer 
+	Parameter IO_CLINT_EN bound to: 0 - type: bool 
+	Parameter IO_UART0_EN bound to: 1 - type: bool 
+	Parameter IO_UART0_RX_FIFO bound to: 1 - type: integer 
+	Parameter IO_UART0_TX_FIFO bound to: 1 - type: integer 
+	Parameter IO_UART1_EN bound to: 0 - type: bool 
+	Parameter IO_UART1_RX_FIFO bound to: 1 - type: integer 
+	Parameter IO_UART1_TX_FIFO bound to: 1 - type: integer 
+	Parameter IO_SPI_EN bound to: 0 - type: bool 
+	Parameter IO_SPI_FIFO bound to: 1 - type: integer 
+	Parameter IO_SDI_EN bound to: 0 - type: bool 
+	Parameter IO_SDI_FIFO bound to: 1 - type: integer 
+	Parameter IO_TWI_EN bound to: 0 - type: bool 
+	Parameter IO_TWI_FIFO bound to: 1 - type: integer 
+	Parameter IO_TWD_EN bound to: 0 - type: bool 
+	Parameter IO_TWD_RX_FIFO bound to: 1 - type: integer 
+	Parameter IO_TWD_TX_FIFO bound to: 1 - type: integer 
+	Parameter IO_PWM_EN bound to: 0 - type: bool 
+	Parameter IO_PWM_NUM bound to: 1 - type: integer 
+	Parameter IO_WDT_EN bound to: 0 - type: bool 
+	Parameter IO_TRNG_EN bound to: 0 - type: bool 
+	Parameter IO_TRNG_FIFO bound to: 1 - type: integer 
+	Parameter IO_TRNG_NUM_RO bound to: 3 - type: integer 
+	Parameter IO_TRNG_NUM_INV bound to: 5 - type: integer 
+	Parameter IO_TRNG_NUM_RBIT bound to: 64 - type: integer 
+	Parameter IO_CFS_EN bound to: 0 - type: bool 
+	Parameter IO_NEOLED_EN bound to: 0 - type: bool 
+	Parameter IO_NEOLED_TX_FIFO bound to: 1 - type: integer 
+	Parameter IO_GPTMR_EN bound to: 0 - type: bool 
+	Parameter IO_GPTMR_NUM bound to: 1 - type: integer 
+	Parameter IO_ONEWIRE_EN bound to: 0 - type: bool 
+	Parameter IO_DMA_EN bound to: 0 - type: bool 
+	Parameter IO_DMA_DSC_FIFO bound to: 4 - type: integer 
+	Parameter IO_SLINK_EN bound to: 0 - type: bool 
+	Parameter IO_SLINK_RX_FIFO bound to: 1 - type: integer 
+	Parameter IO_SLINK_TX_FIFO bound to: 1 - type: integer 
+	Parameter IO_TRACER_EN bound to: 0 - type: bool 
+	Parameter IO_TRACER_BUFFER bound to: 1 - type: integer 
+	Parameter IO_TRACER_SIMLOG_EN bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'neorv32_vivado_ip' declared at '/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32_vivado_ip.vhd:23' bound to instance 'U0' of component 'neorv32_vivado_ip' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ip/design_1_neorv32_vivado_ip_0_0/synth/design_1_neorv32_vivado_ip_0_0.vhd:346]
+INFO: [Synth 8-638] synthesizing module 'neorv32_vivado_ip' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32_vivado_ip.vhd:287]
+	Parameter CLOCK_FREQUENCY bound to: 100000000 - type: integer 
+	Parameter DUAL_CORE_EN bound to: 0 - type: bool 
+	Parameter BOOT_MODE_SELECT bound to: 0 - type: integer 
+	Parameter BOOT_ADDR_CUSTOM bound to: 32'b00000000000000000000000000000000 
+	Parameter OCD_EN bound to: 0 - type: bool 
+	Parameter OCD_NUM_HW_TRIGGERS bound to: 0 - type: integer 
+	Parameter OCD_AUTHENTICATION bound to: 0 - type: bool 
+	Parameter OCD_JEDEC_ID bound to: 11'b00000000000 
+	Parameter RISCV_ISA_C bound to: 0 - type: bool 
+	Parameter RISCV_ISA_E bound to: 0 - type: bool 
+	Parameter RISCV_ISA_M bound to: 0 - type: bool 
+	Parameter RISCV_ISA_U bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zaamo bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zalrsc bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zba bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zbb bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zbkb bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zbkc bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zbkx bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zbs bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zcb bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zfinx bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zibi bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zicntr bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zicond bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zihpm bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zimop bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zmmul bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zknd bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zkne bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zknh bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zksed bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Zksh bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Smcntrpmf bound to: 0 - type: bool 
+	Parameter RISCV_ISA_Xcfu bound to: 0 - type: bool 
+	Parameter CPU_CONSTT_BR_EN bound to: 0 - type: bool 
+	Parameter CPU_FAST_MUL_EN bound to: 0 - type: bool 
+	Parameter CPU_FAST_SHIFT_EN bound to: 0 - type: bool 
+	Parameter CPU_RF_ARCH_SEL bound to: 1 - type: integer 
+	Parameter PMP_NUM_REGIONS bound to: 0 - type: integer 
+	Parameter PMP_MIN_GRANULARITY bound to: 4 - type: integer 
+	Parameter PMP_TOR_MODE_EN bound to: 0 - type: bool 
+	Parameter PMP_NAP_MODE_EN bound to: 0 - type: bool 
+	Parameter HPM_NUM_CNTS bound to: 0 - type: integer 
+	Parameter HPM_CNT_WIDTH bound to: 40 - type: integer 
+	Parameter IMEM_EN bound to: 1 - type: bool 
+	Parameter IMEM_BASE bound to: 32'b00000000000000000000000000000000 
+	Parameter IMEM_SIZE bound to: 32768 - type: integer 
+	Parameter IMEM_OUTREG_EN bound to: 0 - type: bool 
+	Parameter DMEM_EN bound to: 1 - type: bool 
+	Parameter DMEM_BASE bound to: 32'b10000000000000000000000000000000 
+	Parameter DMEM_SIZE bound to: 8192 - type: integer 
+	Parameter DMEM_OUTREG_EN bound to: 0 - type: bool 
+	Parameter ICACHE_EN bound to: 0 - type: bool 
+	Parameter ICACHE_NUM_BLOCKS bound to: 4 - type: integer 
+	Parameter DCACHE_EN bound to: 0 - type: bool 
+	Parameter DCACHE_NUM_BLOCKS bound to: 4 - type: integer 
+	Parameter CACHE_BLOCK_SIZE bound to: 64 - type: integer 
+	Parameter CACHE_BURSTS_EN bound to: 0 - type: bool 
+	Parameter XBUS_EN bound to: 1 - type: bool 
+	Parameter XBUS_TIMEOUT bound to: 2048 - type: integer 
+	Parameter XBUS_REGSTAGE_EN bound to: 0 - type: bool 
+	Parameter IO_GPIO_NUM bound to: 1 - type: integer 
+	Parameter IO_GPIO_DIR_EN bound to: 0 - type: bool 
+	Parameter IO_CLINT_EN bound to: 0 - type: bool 
+	Parameter IO_UART0_EN bound to: 1 - type: bool 
+	Parameter IO_UART0_RX_FIFO bound to: 1 - type: integer 
+	Parameter IO_UART0_TX_FIFO bound to: 1 - type: integer 
+	Parameter IO_UART1_EN bound to: 0 - type: bool 
+	Parameter IO_UART1_RX_FIFO bound to: 1 - type: integer 
+	Parameter IO_UART1_TX_FIFO bound to: 1 - type: integer 
+	Parameter IO_SPI_EN bound to: 0 - type: bool 
+	Parameter IO_SPI_FIFO bound to: 1 - type: integer 
+	Parameter IO_SDI_EN bound to: 0 - type: bool 
+	Parameter IO_SDI_FIFO bound to: 1 - type: integer 
+	Parameter IO_TWI_EN bound to: 0 - type: bool 
+	Parameter IO_TWI_FIFO bound to: 1 - type: integer 
+	Parameter IO_TWD_EN bound to: 0 - type: bool 
+	Parameter IO_TWD_RX_FIFO bound to: 1 - type: integer 
+	Parameter IO_TWD_TX_FIFO bound to: 1 - type: integer 
+	Parameter IO_PWM_NUM bound to: 0 - type: integer 
+	Parameter IO_WDT_EN bound to: 0 - type: bool 
+	Parameter IO_TRNG_EN bound to: 0 - type: bool 
+	Parameter IO_TRNG_FIFO bound to: 1 - type: integer 
+	Parameter IO_TRNG_NUM_RO bound to: 3 - type: integer 
+	Parameter IO_TRNG_NUM_INV bound to: 5 - type: integer 
+	Parameter IO_TRNG_NUM_RBIT bound to: 64 - type: integer 
+	Parameter IO_CFS_EN bound to: 0 - type: bool 
+	Parameter IO_NEOLED_EN bound to: 0 - type: bool 
+	Parameter IO_NEOLED_TX_FIFO bound to: 1 - type: integer 
+	Parameter IO_GPTMR_NUM bound to: 0 - type: integer 
+	Parameter IO_ONEWIRE_EN bound to: 0 - type: bool 
+	Parameter IO_DMA_EN bound to: 0 - type: bool 
+	Parameter IO_DMA_DSC_FIFO bound to: 4 - type: integer 
+	Parameter IO_SLINK_EN bound to: 0 - type: bool 
+	Parameter IO_SLINK_RX_FIFO bound to: 1 - type: integer 
+	Parameter IO_SLINK_TX_FIFO bound to: 1 - type: integer 
+	Parameter IO_TRACER_EN bound to: 0 - type: bool 
+	Parameter IO_TRACER_BUFFER bound to: 1 - type: integer 
+	Parameter IO_TRACER_SIMLOG_EN bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'neorv32_top' declared at '/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_top.vhd:21' bound to instance 'neorv32_top_inst' of component 'neorv32_top' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32_vivado_ip.vhd:382]
+INFO: [Synth 8-638] synthesizing module 'neorv32_top' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_top.vhd:283]
+INFO: [Synth 8-638] synthesizing module 'neorv32_sys_reset' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_sys.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_sys_reset' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_sys.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'neorv32_sys_clock' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_sys.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_sys_clock' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_sys.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_frontend' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_frontend.vhd:45]
+	Parameter AWIDTH bound to: 1 - type: integer 
+	Parameter DWIDTH bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'neorv32_cpu_frontend_ipb' declared at '/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_frontend.vhd:326' bound to instance 'ipb_inst' of component 'neorv32_cpu_frontend_ipb' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_frontend.vhd:184]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_frontend_ipb' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_frontend.vhd:347]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_frontend_ipb' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_frontend.vhd:347]
+	Parameter AWIDTH bound to: 1 - type: integer 
+	Parameter DWIDTH bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'neorv32_cpu_frontend_ipb' declared at '/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_frontend.vhd:326' bound to instance 'ipb_inst' of component 'neorv32_cpu_frontend_ipb' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_frontend.vhd:184]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_frontend' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_frontend.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_control' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_control' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_regfile' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_regfile.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_regfile' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_regfile.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_alu' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_alu.vhd:60]
+INFO: [Synth 8-226] default block is never used [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_alu.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_alu_shifter' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_alu_shifter.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_alu_shifter' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_alu_shifter.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_alu' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_alu.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_lsu' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_lsu.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_lsu' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_lsu.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bus_switch' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bus.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_switch' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bus.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bus_gateway' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bus.vhd:305]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_gateway' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bus.vhd:305]
+INFO: [Synth 8-638] synthesizing module 'neorv32_imem' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_imem.vhd:31]
+	Parameter AWIDTH bound to: 15 - type: integer 
+	Parameter OUTREG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'neorv32_imem_ram' declared at '/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_imem_ram.vhd:20' bound to instance 'imem_ram_inst' of component 'neorv32_imem_ram' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_imem.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'neorv32_imem_ram' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_imem_ram.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'neorv32_prim_spram' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_prim.vhd:186]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_spram' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_prim.vhd:186]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_imem_ram' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_imem_ram.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_imem' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_imem.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'neorv32_dmem' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_dmem.vhd:30]
+	Parameter AWIDTH bound to: 13 - type: integer 
+	Parameter OUTREG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'neorv32_dmem_ram' declared at '/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_dmem_ram.vhd:20' bound to instance 'dmem_ram_inst' of component 'neorv32_dmem_ram' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_dmem.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'neorv32_dmem_ram' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_dmem_ram.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'neorv32_prim_spram__parameterized0' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_prim.vhd:186]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_spram__parameterized0' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_prim.vhd:186]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_dmem_ram' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_dmem_ram.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_dmem' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_dmem.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'neorv32_xbus' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_xbus.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bus_reg' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bus.vhd:190]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_reg' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bus.vhd:190]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_xbus' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_xbus.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bus_io_switch' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bus.vhd:549]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bus_reg__parameterized0' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bus.vhd:190]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_reg__parameterized0' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bus.vhd:190]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_io_switch' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bus.vhd:549]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bootrom' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bootrom.vhd:26]
+	Parameter AWIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'neorv32_bootrom_rom' declared at '/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bootrom_rom.vhd:21' bound to instance 'bootrom_rom_inst' of component 'neorv32_bootrom_rom' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bootrom.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bootrom_rom' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bootrom_rom.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bootrom_rom' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bootrom_rom.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bootrom' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_bootrom.vhd:26]
+INFO: [Synth 8-638] synthesizing module 'neorv32_gpio' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_gpio.vhd:34]
+WARNING: [Synth 8-614] signal 'port_dir' is read in the process but is not in the sensitivity list [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_gpio.vhd:132]
+INFO: [Synth 8-226] default block is never used [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_gpio.vhd:149]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_gpio' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_gpio.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'neorv32_uart' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_uart.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'neorv32_prim_fifo' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_prim.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_fifo' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_prim.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_uart' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_uart.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'neorv32_sysinfo' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_sysinfo.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_sysinfo' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_sysinfo.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_top' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_top.vhd:283]
+	Parameter BURST_EN bound to: 0 - type: bool 
+	Parameter BURST_LEN bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'xbus2axi4_bridge' declared at '/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/xbus2axi4_bridge.vhd:17' bound to instance 'axi4_bridge_inst' of component 'xbus2axi4_bridge' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32_vivado_ip.vhd:671]
+INFO: [Synth 8-638] synthesizing module 'xbus2axi4_bridge' [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/xbus2axi4_bridge.vhd:74]
+INFO: [Synth 8-226] default block is never used [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/xbus2axi4_bridge.vhd:98]
+INFO: [Synth 8-256] done synthesizing module 'xbus2axi4_bridge' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/xbus2axi4_bridge.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_vivado_ip' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32_vivado_ip.vhd:287]
+INFO: [Synth 8-256] done synthesizing module 'design_1_neorv32_vivado_ip_0_0' (0#1) [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ip/design_1_neorv32_vivado_ip_0_0/synth/design_1_neorv32_vivado_ip_0_0.vhd:101]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[if_ready] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[pc_cur] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[pc_nxt] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[rf_rs1] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[rf_rs2] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[rf_rd] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[lsu_mo_en] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[lsu_mi_en] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[lsu_priv] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[csr_wdata] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cnt_event] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[ir_funct3] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[ir_funct12] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[ir_opcode] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_priv] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_trap] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_sync_exc] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_debug] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:198]
+WARNING: [Synth 8-6014] Unused sequential element csr_reg[mcounteren] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:1085]
+WARNING: [Synth 8-6014] Unused sequential element csr_reg[dpc] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:1085]
+WARNING: [Synth 8-6014] Unused sequential element csr_reg[dscratch0] was removed.  [/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/5917/src/neorv32/neorv32_cpu_control.vhd:1085]
