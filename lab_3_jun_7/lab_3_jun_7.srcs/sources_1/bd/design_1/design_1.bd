@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB30A6B1A24B2678B",
+      "boundary_crc": "0xDCB3D3AD111AD3A3",
       "device": "xc7a100tcsg324-1",
       "gen_directory": "../../../../lab_3_jun_7.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -16,16 +16,9 @@
       "proc_sys_reset_0": "",
       "xlconstant_0": "",
       "axi_miner_0": "",
-      "axi_smc": "",
-      "reset_inv_0": ""
+      "axi_smc": ""
     },
     "ports": {
-      "uart0_txd_o_0": {
-        "direction": "O"
-      },
-      "uart0_rxd_i_0": {
-        "direction": "I"
-      },
       "sys_clock": {
         "type": "clk",
         "direction": "I",
@@ -63,16 +56,23 @@
           }
         }
       },
-      "reset_0": {
-        "type": "rst",
+      "uart0_txd_o_0": {
+        "type": "data",
+        "direction": "O",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "uart0_rxd_i_0": {
+        "type": "data",
         "direction": "I",
         "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
+          "LAYERED_METADATA": {
+            "value": "undef",
             "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW"
           }
         }
       }
@@ -99,7 +99,7 @@
             "value": "32768"
           },
           "IO_GPIO_EN": {
-            "value": "true"
+            "value": "false"
           },
           "IO_UART0_EN": {
             "value": "true"
@@ -262,22 +262,6 @@
             }
           }
         }
-      },
-      "reset_inv_0": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "ip_revision": "5",
-        "xci_name": "design_1_reset_inv_0_0",
-        "xci_path": "ip/design_1_reset_inv_0_0/design_1_reset_inv_0_0.xci",
-        "inst_hier_path": "reset_inv_0",
-        "has_run_ip_tcl": "true",
-        "parameters": {
-          "C_OPERATION": {
-            "value": "not"
-          },
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
       }
     },
     "interface_nets": {
@@ -304,12 +288,6 @@
           "axi_miner_0/s00_axi_aclk"
         ]
       },
-      "clk_wiz_0_locked": {
-        "ports": [
-          "clk_wiz_0/locked",
-          "proc_sys_reset_0/dcm_locked"
-        ]
-      },
       "neorv32_vivado_ip_0_uart0_txd_o": {
         "ports": [
           "neorv32_vivado_ip_0/uart0_txd_o",
@@ -324,22 +302,16 @@
           "axi_smc/aresetn"
         ]
       },
-      "reset_0_1": {
+      "proc_sys_reset_0_peripheral_reset": {
         "ports": [
-          "reset_0",
-          "proc_sys_reset_0/ext_reset_in"
+          "proc_sys_reset_0/peripheral_reset",
+          "clk_wiz_0/reset"
         ]
       },
       "reset_1": {
         "ports": [
           "reset",
-          "reset_inv_0/Op1"
-        ]
-      },
-      "reset_inv_0_Res": {
-        "ports": [
-          "reset_inv_0/Res",
-          "clk_wiz_0/reset"
+          "proc_sys_reset_0/ext_reset_in"
         ]
       },
       "sys_clock_1": {
@@ -360,8 +332,7 @@
           "neorv32_vivado_ip_0/irq_mei_i",
           "neorv32_vivado_ip_0/irq_mti_i",
           "neorv32_vivado_ip_0/irq_msi_i",
-          "neorv32_vivado_ip_0/uart0_ctsn_i",
-          "neorv32_vivado_ip_0/gpio_i"
+          "neorv32_vivado_ip_0/uart0_ctsn_i"
         ]
       }
     },

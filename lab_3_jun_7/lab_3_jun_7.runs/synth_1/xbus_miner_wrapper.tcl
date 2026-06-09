@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 set_param general.usePosixSpawnForFork 1
 set_param bd.open.in_stealth_mode 1
 OPTRACE "Creating in-memory project" START { }
@@ -77,11 +78,12 @@ set_property ip_repo_paths {
 } [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/bkanaley/lab_3_jun_7/lab_3_jun_7.cache/ip [current_project]
-set_property ip_cache_permissions {read write} [current_project]
+set_property ip_cache_permissions disable [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   /home/bkanaley/csc-397-595-lab3-bmikek/rtl/miner.v
+  /home/bkanaley/lab_3_jun_7/lab_3_jun_7.srcs/sources_1/imports/rtl/miner.v
   /home/bkanaley/csc-397-595-lab3-bmikek/rtl/xbus_miner_wrapper.v
 }
 OPTRACE "Adding files" END { }
@@ -93,7 +95,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc /home/bkanaley/lab_3_jun_7/lab_3_jun_7.srcs/constrs_1/new/arty_pins.xdc
+set_property used_in_implementation false [get_files /home/bkanaley/lab_3_jun_7/lab_3_jun_7.srcs/constrs_1/new/arty_pins.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/bkanaley/lab_3_jun_7/lab_3_jun_7.srcs/utils_1/imports/synth_1/xbus_miner_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

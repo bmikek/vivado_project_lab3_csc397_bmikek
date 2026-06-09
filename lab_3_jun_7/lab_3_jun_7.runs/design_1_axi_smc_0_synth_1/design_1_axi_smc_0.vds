@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Mon Jun  8 02:42:00 2026
-# Process ID         : 34175
+# Start of session at: Tue Jun  9 19:25:50 2026
+# Process ID         : 146171
 # Current directory  : /home/bkanaley/lab_3_jun_7/lab_3_jun_7.runs/design_1_axi_smc_0_synth_1
 # Command line       : vivado -log design_1_axi_smc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_smc_0.tcl
 # Log file           : /home/bkanaley/lab_3_jun_7/lab_3_jun_7.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.vds
@@ -19,10 +19,10 @@
 # Host memory        : 8324 MB
 # Swap memory        : 0 MB
 # Total Virtual      : 8324 MB
-# Available Virtual  : 5661 MB
+# Available Virtual  : 2473 MB
 #-----------------------------------------------------------
 source design_1_axi_smc_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1615.426 ; gain = 204.262 ; free physical = 552 ; free virtual = 3660
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1514.191 ; gain = 89.059 ; free physical = 125 ; free virtual = 1383
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bkanaley/csc-397-595-lab3-bmikek/rtl/axi_miner_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bkanaley/csc-397-595-lab3-bmikek/neorv32/rtl/system_integration/neorv32_vivado_ip_work/packaged_ip'.
@@ -34,7 +34,4 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 34372
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:01:44 . Memory (MB): peak = 2133.574 ; gain = 438.656 ; free physical = 128 ; free virtual = 471
----------------------------------------------------------------------------------
+INFO: [Synth 8-7075] Helper process launched with PID 147291

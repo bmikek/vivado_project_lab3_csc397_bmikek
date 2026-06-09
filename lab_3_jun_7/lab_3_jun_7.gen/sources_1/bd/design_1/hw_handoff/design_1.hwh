@@ -1,15 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun  8 02:34:30 2026" VIVADOVERSION="2025.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun  9 19:25:39 2026" VIVADOVERSION="2025.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:arty-a7-100:part0:1.1" DEVICE="7a100t" NAME="design_1" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="reset_inv_0" PORT="Op1"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="reset_0" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="proc_sys_reset_0" PORT="ext_reset_in"/>
       </CONNECTIONS>
@@ -19,12 +14,12 @@
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="uart0_rxd_i_0" SIGIS="undef" SIGNAME="External_Ports_uart0_rxd_i_0">
+    <PORT DIR="I" NAME="uart0_rxd_i_0" SIGIS="data" SIGNAME="External_Ports_uart0_rxd_i_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="neorv32_vivado_ip_0" PORT="uart0_rxd_i"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="uart0_txd_o_0" SIGIS="undef" SIGNAME="neorv32_vivado_ip_0_uart0_txd_o">
+    <PORT DIR="O" NAME="uart0_txd_o_0" SIGIS="data" SIGNAME="neorv32_vivado_ip_0_uart0_txd_o">
       <CONNECTIONS>
         <CONNECTION INSTANCE="neorv32_vivado_ip_0" PORT="uart0_txd_o"/>
       </CONNECTIONS>
@@ -1194,14 +1189,10 @@
             <CONNECTION INSTANCE="axi_miner_0" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
+        <PORT DIR="O" NAME="locked" SIGIS="undef"/>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_reset">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="dcm_locked"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="reset_inv_0_Res">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="reset_inv_0" PORT="Res"/>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_reset"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1242,7 +1233,7 @@
         <PARAMETER NAME="IO_DMA_EN" VALUE="false"/>
         <PARAMETER NAME="IO_GPIO_DIR_EN" VALUE="false"/>
         <PARAMETER NAME="IO_GPIO_DIR_NUM" VALUE="1"/>
-        <PARAMETER NAME="IO_GPIO_EN" VALUE="true"/>
+        <PARAMETER NAME="IO_GPIO_EN" VALUE="false"/>
         <PARAMETER NAME="IO_GPIO_IN_NUM" VALUE="1"/>
         <PARAMETER NAME="IO_GPIO_OUT_NUM" VALUE="1"/>
         <PARAMETER NAME="IO_GPTMR_EN" VALUE="false"/>
@@ -1326,12 +1317,6 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="gpio_i" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="gpio_o" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="irq_mei_i" SIGIS="undef" SIGNAME="xlconstant_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
@@ -1609,14 +1594,10 @@
       <PORTS>
         <PORT DIR="I" NAME="aux_reset_in" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
-        <PORT DIR="I" NAME="dcm_locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
+        <PORT DIR="I" NAME="dcm_locked" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ext_reset_in" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="locked"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="ext_reset_in" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="reset_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>
@@ -1629,33 +1610,14 @@
             <CONNECTION INSTANCE="axi_smc" PORT="aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="5" FULLNAME="/reset_inv_0" HWVERSION="2.0" INSTANCE="reset_inv_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="C_OPERATION" VALUE="not"/>
-        <PARAMETER NAME="C_SIZE" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_reset_inv_0_0"/>
-        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_notgate.png"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="0" NAME="Op1" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_reset">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="Res" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="undef" SIGNAME="reset_inv_0_Res">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1676,7 +1638,6 @@
             <CONNECTION INSTANCE="neorv32_vivado_ip_0" PORT="irq_mti_i"/>
             <CONNECTION INSTANCE="neorv32_vivado_ip_0" PORT="irq_msi_i"/>
             <CONNECTION INSTANCE="neorv32_vivado_ip_0" PORT="uart0_ctsn_i"/>
-            <CONNECTION INSTANCE="neorv32_vivado_ip_0" PORT="gpio_i"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

@@ -54,3 +54,30 @@ INFO: [Synth 8-7075] Helper process launched with PID 34372
 ---------------------------------------------------------------------------------
 Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:01:44 . Memory (MB): peak = 2133.574 ; gain = 438.656 ; free physical = 128 ; free virtual = 471
 ---------------------------------------------------------------------------------
+
+*** Running vivado
+    with args -log design_1_axi_smc_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_smc_0.tcl
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Tue Jun  9 19:25:51 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source design_1_axi_smc_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1514.191 ; gain = 89.059 ; free physical = 125 ; free virtual = 1383
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bkanaley/csc-397-595-lab3-bmikek/rtl/axi_miner_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bkanaley/csc-397-595-lab3-bmikek/neorv32/rtl/system_integration/neorv32_vivado_ip_work/packaged_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/bkanaley/Vivado/2025.1/Vivado/data/ip'.
+Command: synth_design -top design_1_axi_smc_0 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 147291

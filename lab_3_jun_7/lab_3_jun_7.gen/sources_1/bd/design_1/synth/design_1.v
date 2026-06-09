@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-//Date        : Mon Jun  8 02:34:26 2026
+//Date        : Tue Jun  9 19:25:32 2026
 //Host        : ubuntuFPGA running 64-bit Ubuntu 24.04.4 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -10,18 +10,16 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=7,numNonXlnxBlks=2,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=3,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=6,numNonXlnxBlks=2,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=5,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (reset,
-    reset_0,
     sys_clock,
     uart0_rxd_i_0,
     uart0_txd_o_0);
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input reset;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_0, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input reset_0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN design_1_sys_clock, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input sys_clock;
-  input uart0_rxd_i_0;
-  output uart0_txd_o_0;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.UART0_RXD_I_0 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.UART0_RXD_I_0, LAYERED_METADATA undef" *) input uart0_rxd_i_0;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.UART0_TXD_O_0 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.UART0_TXD_O_0, LAYERED_METADATA undef" *) output uart0_txd_o_0;
 
   wire [4:0]axi_smc_M00_AXI_ARADDR;
   wire [2:0]axi_smc_M00_AXI_ARPROT;
@@ -43,7 +41,6 @@ module design_1
   wire [3:0]axi_smc_M00_AXI_WSTRB;
   wire axi_smc_M00_AXI_WVALID;
   wire clk_wiz_0_clk_out1;
-  wire clk_wiz_0_locked;
   wire [31:0]neorv32_vivado_ip_0_m_axi_ARADDR;
   wire [1:0]neorv32_vivado_ip_0_m_axi_ARBURST;
   wire [3:0]neorv32_vivado_ip_0_m_axi_ARCACHE;
@@ -74,9 +71,8 @@ module design_1
   wire [3:0]neorv32_vivado_ip_0_m_axi_WSTRB;
   wire neorv32_vivado_ip_0_m_axi_WVALID;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
+  wire [0:0]proc_sys_reset_0_peripheral_reset;
   wire reset;
-  wire reset_0;
-  wire [0:0]reset_inv_0_Res;
   wire sys_clock;
   wire uart0_rxd_i_0;
   wire uart0_txd_o_0;
@@ -162,11 +158,9 @@ module design_1
   design_1_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(sys_clock),
         .clk_out1(clk_wiz_0_clk_out1),
-        .locked(clk_wiz_0_locked),
-        .reset(reset_inv_0_Res));
+        .reset(proc_sys_reset_0_peripheral_reset));
   design_1_neorv32_vivado_ip_0_0 neorv32_vivado_ip_0
        (.clk(clk_wiz_0_clk_out1),
-        .gpio_i(xlconstant_0_dout),
         .irq_mei_i(xlconstant_0_dout),
         .irq_msi_i(xlconstant_0_dout),
         .irq_mti_i(xlconstant_0_dout),
@@ -205,14 +199,12 @@ module design_1
         .uart0_txd_o(uart0_txd_o_0));
   design_1_proc_sys_reset_0_0 proc_sys_reset_0
        (.aux_reset_in(1'b1),
-        .dcm_locked(clk_wiz_0_locked),
-        .ext_reset_in(reset_0),
+        .dcm_locked(1'b1),
+        .ext_reset_in(reset),
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(proc_sys_reset_0_peripheral_aresetn),
+        .peripheral_reset(proc_sys_reset_0_peripheral_reset),
         .slowest_sync_clk(clk_wiz_0_clk_out1));
-  design_1_reset_inv_0_0 reset_inv_0
-       (.Op1(reset),
-        .Res(reset_inv_0_Res));
   design_1_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
 endmodule

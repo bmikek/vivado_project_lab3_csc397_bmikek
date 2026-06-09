@@ -333,7 +333,7 @@
         miner miner_inst (
             .clk    (S_AXI_ACLK),
             .reset  (~S_AXI_ARESETN),
-            .data00 (slv_reg0),
+            .data0 (slv_reg0),
             .data1  (slv_reg1),
             .data2  (slv_reg2),
             .data3  (slv_reg3),

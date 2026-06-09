@@ -11,7 +11,6 @@ vlib questa_lib/msim/smartconnect_v1_0
 vlib questa_lib/msim/axi_infrastructure_v1_1_0
 vlib questa_lib/msim/axi_register_slice_v2_1_35
 vlib questa_lib/msim/axi_vip_v1_1_21
-vlib questa_lib/msim/util_vector_logic_v2_0_5
 
 vmap xilinx_vip questa_lib/msim/xilinx_vip
 vmap xpm questa_lib/msim/xpm
@@ -23,7 +22,6 @@ vmap smartconnect_v1_0 questa_lib/msim/smartconnect_v1_0
 vmap axi_infrastructure_v1_1_0 questa_lib/msim/axi_infrastructure_v1_1_0
 vmap axi_register_slice_v2_1_35 questa_lib/msim/axi_register_slice_v2_1_35
 vmap axi_vip_v1_1_21 questa_lib/msim/axi_vip_v1_1_21
-vmap util_vector_logic_v2_0_5 questa_lib/msim/util_vector_logic_v2_0_5
 
 vlog -work xilinx_vip -64 -incr -mfcu  -sv -L axi_vip_v1_1_21 -L smartconnect_v1_0 -L xilinx_vip "+incdir+/home/bkanaley/Vivado/2025.1/Vivado/data/xilinx_vip/include" \
 "/home/bkanaley/Vivado/2025.1/Vivado/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
@@ -125,6 +123,7 @@ vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../lab_3_jun_7.gen/
 "../../../bd/design_1/ipshared/0821/hdl/axi_miner_slave_lite_v1_0_S00_AXI.v" \
 "../../../bd/design_1/ipshared/0821/hdl/axi_miner.v" \
 "../../../bd/design_1/ip/design_1_axi_miner_0_0/sim/design_1_axi_miner_0_0.v" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/sim/bd_afc3.v" \
 "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/sim/bd_afc3_one_0.v" \
 
 vcom -work xil_defaultlib -64 -93  \
@@ -177,9 +176,6 @@ vlog -work smartconnect_v1_0 -64 -incr -mfcu  -sv -L axi_vip_v1_1_21 -L smartcon
 vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_21 -L smartconnect_v1_0 -L xilinx_vip "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../../Vivado/2025.1/data/rsb/busdef" "+incdir+/home/bkanaley/Vivado/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/sim/bd_afc3_m00e_0.sv" \
 
-vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../../Vivado/2025.1/data/rsb/busdef" "+incdir+/home/bkanaley/Vivado/2025.1/Vivado/data/xilinx_vip/include" \
-"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/sim/bd_afc3.v" \
-
 vlog -work smartconnect_v1_0 -64 -incr -mfcu  -sv -L axi_vip_v1_1_21 -L smartconnect_v1_0 -L xilinx_vip "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../../Vivado/2025.1/data/rsb/busdef" "+incdir+/home/bkanaley/Vivado/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/3718/hdl/sc_switchboard_v1_0_vl_rfs.sv" \
 
@@ -195,11 +191,7 @@ vlog -work axi_vip_v1_1_21 -64 -incr -mfcu  -sv -L axi_vip_v1_1_21 -L smartconne
 vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_21 -L smartconnect_v1_0 -L xilinx_vip "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../../Vivado/2025.1/data/rsb/busdef" "+incdir+/home/bkanaley/Vivado/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_axi_smc_0/sim/design_1_axi_smc_0.sv" \
 
-vlog -work util_vector_logic_v2_0_5 -64 -incr -mfcu  "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../../Vivado/2025.1/data/rsb/busdef" "+incdir+/home/bkanaley/Vivado/2025.1/Vivado/data/xilinx_vip/include" \
-"../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/e056/hdl/util_vector_logic_v2_0_vl_rfs.v" \
-
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../../Vivado/2025.1/data/rsb/busdef" "+incdir+/home/bkanaley/Vivado/2025.1/Vivado/data/xilinx_vip/include" \
-"../../../bd/design_1/ip/design_1_reset_inv_0_0/sim/design_1_reset_inv_0_0.v" \
 "../../../bd/design_1/sim/design_1.v" \
 
 vlog -work xil_defaultlib \

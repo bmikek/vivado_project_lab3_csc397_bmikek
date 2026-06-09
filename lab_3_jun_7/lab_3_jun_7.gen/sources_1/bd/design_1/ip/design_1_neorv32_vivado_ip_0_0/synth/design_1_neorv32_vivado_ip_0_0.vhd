@@ -86,8 +86,6 @@ ENTITY design_1_neorv32_vivado_ip_0_0 IS
     m_axi_bresp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     m_axi_bvalid : IN STD_LOGIC;
     m_axi_bready : OUT STD_LOGIC;
-    gpio_o : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gpio_i : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     uart0_txd_o : OUT STD_LOGIC;
     uart0_rxd_i : IN STD_LOGIC;
     uart0_rtsn_o : OUT STD_LOGIC;
@@ -407,7 +405,7 @@ BEGIN
       XBUS_EN => true,
       XBUS_TIMEOUT => 2048,
       XBUS_REGSTAGE_EN => false,
-      IO_GPIO_EN => true,
+      IO_GPIO_EN => false,
       IO_GPIO_IN_NUM => 1,
       IO_GPIO_OUT_NUM => 1,
       IO_GPIO_DIR_EN => false,
@@ -491,8 +489,7 @@ BEGIN
       jtag_tck_i => '0',
       jtag_tdi_i => '0',
       jtag_tms_i => '0',
-      gpio_o => gpio_o,
-      gpio_i => gpio_i,
+      gpio_i => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
       uart0_txd_o => uart0_txd_o,
       uart0_rxd_i => uart0_rxd_i,
       uart0_rtsn_o => uart0_rtsn_o,
