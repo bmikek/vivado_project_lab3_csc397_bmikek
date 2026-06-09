@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:axi_miner:1.0
-// IP Revision: 2
+// IP Revision: 4
 
 `timescale 1ns/1ps
 

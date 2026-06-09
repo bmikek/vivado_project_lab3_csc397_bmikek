@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:axi_miner:1.0
-// IP Revision: 2
+// IP Revision: 4
 
 (* X_CORE_INFO = "axi_miner,Vivado 2025.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_axi_miner_0_0,axi_miner,{}" *)

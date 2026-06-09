@@ -1,0 +1,27 @@
+set_property SRC_FILE_INFO {cfile:/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_ooc.xdc rfile:../../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_ooc.xdc id:1 order:EARLY scoped_inst:U0} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/bkanaley/lab_3_jun_7/lab_3_jun_7.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc rfile:../../../../../lab_3_jun_7.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc id:2 order:EARLY used_in_board:yes scoped_inst:U0 prop_thru_buffer:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/bkanaley/lab_3_jun_7/lab_3_jun_7.runs/design_1_proc_sys_reset_0_0_synth_1/dont_touch.xdc rfile:../../../dont_touch.xdc id:3} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/bkanaley/Vivado/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl rfile:../../../../../../Vivado/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl id:4 order:LATE scoped_inst:U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/bkanaley/Vivado/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl rfile:../../../../../../Vivado/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl id:5 order:LATE scoped_inst:U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT unmanaged:yes} [current_design]
+set_property src_info {type:SCOPED_XDC file:1 line:55 export:INPUT save:INPUT read:FILTER_OUT_OF_CONTEXT} [current_design]
+create_clock -period 10.000 -name slowest_sync_clk [get_ports slowest_sync_clk]
+set_property src_info {type:SCOPED_XDC file:2 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property BOARD_PART_PIN reset [get_ports ext_reset_in]
+set_property src_info {type:SCOPED_XDC file:2 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS33 [get_ports ext_reset_in]
+set_property src_info {type:XDC file:3 line:9 export:INPUT save:INPUT read:READ} [current_design]
+set_property KEEP_HIERARCHY SOFT [get_cells U0]
+current_instance U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX
+set_property src_info {type:SCOPED_XDC file:4 line:5 export:INPUT save:NONE read:READ} [current_design]
+set_false_path -to [get_cells {syncstages_ff_reg[0]}]
+current_instance
+current_instance U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT
+set_property src_info {type:SCOPED_XDC file:5 line:5 export:INPUT save:NONE read:READ} [current_design]
+set_false_path -to [get_cells {syncstages_ff_reg[0]}]
+current_instance
+set_property src_info {type:TCL file:{} line:-1 export:INPUT save:INPUT read:READ} [current_design]
+set_property KEEP_HIERARCHY SOFT [get_cells U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX]
+set_property src_info {type:TCL file:{} line:-1 export:INPUT save:INPUT read:READ} [current_design]
+set_property KEEP_HIERARCHY SOFT [get_cells U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT]
+set_property src_info {type:TCL file:{} line:-1 export:INPUT save:INPUT read:READ} [current_design]
+set_property KEEP true [get_nets ext_reset_in]

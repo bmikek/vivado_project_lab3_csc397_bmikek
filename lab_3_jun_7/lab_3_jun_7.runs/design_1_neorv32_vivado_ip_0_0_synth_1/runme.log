@@ -7,12 +7,11 @@
   **** SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
   **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
   **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-  **** Start of session at: Tue Jun  9 19:25:52 2026
+  **** Start of session at: Tue Jun  9 21:37:08 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source design_1_neorv32_vivado_ip_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1513.992 ; gain = 89.059 ; free physical = 125 ; free virtual = 1383
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bkanaley/csc-397-595-lab3-bmikek/rtl/axi_miner_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bkanaley/csc-397-595-lab3-bmikek/neorv32/rtl/system_integration/neorv32_vivado_ip_work/packaged_ip'.
@@ -24,4 +23,4 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 147292
+INFO: [Synth 8-7075] Helper process launched with PID 5749
